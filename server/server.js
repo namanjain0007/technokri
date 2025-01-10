@@ -13,7 +13,7 @@ const jobApplicationRouter = require("./router/job_application-router");
 
 server.use(
   cors({
-    origin: "http://localhost:5173", // Frontend ka URL
+    origin: "https://technokri-frontend.onrender.com", // Frontend ka URL
     credentials: true, //  allowed Cookies
   })
 );
@@ -30,17 +30,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// server.use(
-//   session({
-//     secret: "yourSecretKey123",
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: {
-//       httpOnly: true, // Security ke liye httpOnly
-//     },
-//   })
-// );
-// server.use(cookieParser());
+
 
 const PORT = 5012;
 
