@@ -24,7 +24,7 @@ const ProfilePage = () => {
     async function checkApplied() {
       try {
         const response = await axios.post(
-          "http://localhost:5012/checkJobId",
+          "https://technokri-backend.onrender.com/checkJobId",
           { id: featuredData.id, _id: logInData._id },
           {
             headers: {
@@ -32,8 +32,6 @@ const ProfilePage = () => {
             },
           }
         );
-        // console.log("id", featuredData.id);
-        // console.log("abcd", response.data);
 
         if (response.data.isDataExists) {
           setCheck(true);
@@ -57,7 +55,7 @@ const ProfilePage = () => {
           {/* Profile Picture */}
           <img
             // src="https://static.vecteezy.com/system/resources/previews/003/715/527/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-vector.jpg"
-            src={`http://localhost:5012/${logInData.path}`}
+            src={`https://technokri-backend.onrender.com/${logInData.path}`}
             alt="User Photo"
             onClick={() => navigate("/")}
             style={{ objectFit: "contain" }}
@@ -210,7 +208,7 @@ const ProfilePage = () => {
           <h4>User Details</h4>
           <img
             // src="https://static.vecteezy.com/system/resources/previews/003/715/527/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-vector.jpg"
-            src={`http://localhost:5012/${logInData.path}`}
+            src={`https://technokri-backend.onrender.com/${logInData.path}`}
             height="100"
             width="100"
             alt="User Photo"
