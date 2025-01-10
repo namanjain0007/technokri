@@ -61,7 +61,7 @@ const App = () => {
       }
 
       try {
-        const response = await axios.get("http://localhost:5012/validate", {
+        const response = await axios.get("https://technokri-backend.onrender.com/validate", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -76,7 +76,7 @@ const App = () => {
             async function checkApplied() {
               try {
                 const response2 = await axios.post(
-                  "http://localhost:5012/checkappliedjobs",
+                  "https://technokri-backend.onrender.com/checkappliedjobs",
                   { _id: response.data.user._id },
                   {
                     headers: {
