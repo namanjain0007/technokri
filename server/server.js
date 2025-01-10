@@ -1,6 +1,18 @@
 const express = require("express");
 const server = express();
 const multer = require("multer");
+const fs = require('fs');
+const path = require('path');  
+// Define the uploads folder path
+const uploadsPath = path.join(__dirname, 'uploads');
+
+// Check if the uploads folder exists
+if (!fs.existsSync(uploadsPath)) {
+    fs.mkdirSync(uploadsPath); // Create the folder if it doesn't exist
+    console.log('Uploads folder created successfully.');
+} else {
+    console.log('Uploads folder already exists.');
+}
 
 const cors = require("cors");
 // const session = require("express-session"); // session import
