@@ -46,7 +46,7 @@ const JobRegistration = () => {
     console.log("data", data);
     try {
       const response = await axios.post(
-        "http://localhost:5012/jobregistration",
+        "https://technokri-backend.onrender.com/jobregistration",
         data,
         {
           headers: {
@@ -59,7 +59,7 @@ const JobRegistration = () => {
         async function checkApplied() {
           try {
             const response2 = await axios.post(
-              "http://localhost:5012/checkappliedjobs",
+              "https://technokri-backend.onrender.com/checkappliedjobs",
               { _id: logInData._id },
               {
                 headers: {
