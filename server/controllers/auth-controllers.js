@@ -62,7 +62,7 @@ const register = async (req, res) => {
       filename: file.filename, // Save file name
     });
 
-    console.log(userCreated);
+    // console.log(userCreated);
     res.status(200).json({
       message: userCreated,
       // token: (await userCreated.generateToken()) || "no data",
