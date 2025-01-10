@@ -35,7 +35,7 @@ const Login = () => {
           async function checkApplied() {
             try {
               const response2 = await axios.post(
-                "http://localhost:5012/checkappliedjobs",
+                "https://technokri-backend.onrender.com/checkappliedjobs",
                 { _id: response.data.user._id },
                 {
                   headers: {
@@ -43,10 +43,7 @@ const Login = () => {
                   },
                 }
               );
-              // console.log("loginpage", response2);
               setTotalAppliedJobs(response2.data.count);
-
-              // console.log("len", response.data.len);
             } catch (error) {
               console.log(error);
             }
