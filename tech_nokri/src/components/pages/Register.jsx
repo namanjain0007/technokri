@@ -98,6 +98,7 @@ const Register = () => {
         }, 500);
       }
     } catch (error) {
+      console.log("error nj",error)
       setErrorMessage(error.response.data.msg);
       setSuccessMessage("");
     }
